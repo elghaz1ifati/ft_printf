@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:27:59 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 10:33:35 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 14:23:13 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,16 +83,49 @@ char	*str(int count, ...)
 	return (str);
 }
 
+// ex maximum
+int	maximum(int count, ...)
+{
+		printf("======== MAX NUMBER  ========\n");
+
+	va_list	numbers;
+	va_start(numbers, count);
+	int max;
+	int current;
+
+	if (count <= 0)
+	{
+		va_end(numbers);
+		return 0;
+	}
+	max = va_arg(numbers, int);
+	int	c = 1;
+	while (c < count)
+	{
+		current = va_arg(numbers, int);
+		if (current > max)
+			max = current;
+		c++;
+	}
+	va_end(numbers);
+	return(max);	
+}
+
 // main
 int	main(void)
 {
+	// sum funct
 	int	add = sum(10, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
 	printf("final sum: [%d]\n", add);
+	// string funct
 	char	*p = str(4, 'f', 'a', 't', 'i');
 	if (p)
 	{
 		printf("final str = %s\n", p);
 		free(p);
 	}
+	// max funct
+	int max = maximum(4, 400, 100, 900, 600);
+	printf("%d\n", max);
 	return 0;
 }
