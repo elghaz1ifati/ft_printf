@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:27:59 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 09:54:56 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:12:10 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
  
 // variadic function is a function can take any number of parameters
 // printf() is a variadic function
-// ex = int function(int count, ...){}
+// ex = int function(int count, ...){} ...(ellipsis)
 // variadic function lives in stdarg.h
 
 // va_list -> complete object type(COT: size in memory is known to the compiler) 
