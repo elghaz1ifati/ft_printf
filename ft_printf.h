@@ -6,14 +6,15 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:29:43 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 14:53:42 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 17:43:32 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-int	ft_printf(const char *, ...);
+# include <stdarg.h>
+
+int	ft_printf(const char *format, ...);
 
 #endif

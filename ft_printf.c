@@ -6,12 +6,14 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:26:40 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 14:53:38 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 17:43:52 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *, ...)
+int	ft_printf(const char *format, ...)
 {
+	(void)format;
+	return (0);
 }
