@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:27:59 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 14:23:13 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 14:49:11 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@
 
 // va_list -> complete object type(COT: size in memory is known to the compiler) 
 // its used to manage variables in variadic functions
+// typedef struct {
+//    unsigned int gp_offset;
+//    unsigned int fp_offset;
+//    void *overflow_arg_area;
+//    void *reg_save_area;
+// } va_list[1];
 
 // MACRO: text replacement (find and replace)
 // va_start va_arg va_copy va_end-> MACROS
