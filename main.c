@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/19 17:27:59 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 10:12:10 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/20 10:33:35 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,15 @@ int	sum(int count, ...)
 		sum += num;
 	}
 	va_end(numbers);
-	printf("final sum: [%d]\n", sum);
+	return sum;
 }
 
 // ex print string
 char	*str(int count, ...)
 {
 	printf("======== PRINT STRING ========\n");
-	va_list		charactres;
-	va_start(charactres, count);
+	va_list		chars;
+	va_start(chars, count);
 	char	*str;
 	int loop;
 	
@@ -73,10 +73,11 @@ char	*str(int count, ...)
 	loop = 0;
 	while (loop < count)
 	{
-		str[loop] = (char)(va_arg(charactres, int));
+		str[loop] = (char)(va_arg(chars, int));
 		printf("current char: %c\n", str[loop]);
 		loop++;
 	}
+	va_end(chars);
 	str[loop] = '\0';
 	printf("current char: [\\%d]\n", str[loop]);
 	return (str);
@@ -85,7 +86,8 @@ char	*str(int count, ...)
 // main
 int	main(void)
 {
-	sum(10, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+	int	add = sum(10, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+	printf("final sum: [%d]\n", add);
 	char	*p = str(4, 'f', 'a', 't', 'i');
 	if (p)
 	{
