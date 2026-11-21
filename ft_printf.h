@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: fatel-gh <fatel-gh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:29:43 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/20 17:43:32 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/21 19:32:38 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <stddef.h>
+# include <unistd.h>
 
 int	ft_printf(const char *format, ...);
+int	ft_putchar(int c);
 
 #endif
