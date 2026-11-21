@@ -6,7 +6,7 @@
 #    By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/21 15:00:16 by fatel-gh          #+#    #+#              #
-#    Updated: 2026/11/21 15:07:20 by fatel-gh         ###   ########.fr        #
+#    Updated: 2026/11/21 16:52:12 by fatel-gh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,11 @@ SOURCES = ft_printf.c
 OBJECTS = $(SOURCES:.c=.o)
 
 all: $(NAME)
-$(NAME) : $(OBJECT)
+$(NAME) : $(OBJECTS)
 	$(ARCHIVE) $(ARFLAGS) $(NAME) $(OBJECTS)
 
 %.o: %.c ft_printf.h
-	$(COMPILER) $(FLAGS) -c $< -o $@
+	$(COMPILER) $(CFLAGS) -c $< -o $@
 clean:
 	$(REMOVE) $(OBJECTS)
 
