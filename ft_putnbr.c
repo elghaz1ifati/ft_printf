@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 03:03:35 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/24 03:29:46 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/24 04:12:13 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_putnbr(int n)
 	nb = n;
 	if (n < 0)
 	{
-		if (ft_putchar('-' == -1))
+		if (ft_putchar('-') == -1)
 			return (-1);
 		count++;
 		nb = -nb;
