@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: fatel-gh <fatel-gh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:26:40 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/24 04:36:02 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/24 15:53:42 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static int	ft_print_conversion(char specifier, va_list arguments)
 	if (specifier == 'u')
 		return (ft_putunbr(va_arg(arguments, unsigned int)));
 	if (specifier == 'x')
-		return (ft_puthex(va_arg (arguments, unsigned int), "0123456789abcdef"));
+		return (ft_puthex(va_arg(arguments, unsigned int), "0123456789abcdef"));
 	if (specifier == 'X')
-		return (ft_puthex(va_arg (arguments, unsigned int), "0123456789ABCDEF"));
+		return (ft_puthex(va_arg(arguments, unsigned int), "0123456789ABCDEF"));
 	if (specifier == '%')
 		return (ft_putchar('%'));
 	return (-1);
