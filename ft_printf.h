@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:29:43 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/24 03:37:46 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/24 04:33:18 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	ft_putchar(int c);
 int	ft_putstr(const char *str);
 int	ft_putnbr(int n);
 int	ft_putunbr(unsigned int n);
+int	ft_puthex(unsigned int n, const char *base);
 
 #endif
