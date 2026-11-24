@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fatel-gh <fatel-gh@student.42.fr>          +#+  +:+       +#+         #
+#    By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/21 15:00:16 by fatel-gh          #+#    #+#              #
-#    Updated: 2026/11/22 19:33:13 by fatel-gh         ###   ########.fr        #
+#    Updated: 2026/11/24 04:05:14 by fatel-gh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CFLAGS = -Wextra -Wall -Werror
 REMOVE = rm -f
 ARCHIVE = ar 
 ARFLAGS = rcs
-SOURCES = ft_printf.c ft_putchar.c ft_putstr.c
+SOURCES = ft_printf.c ft_putchar.c ft_putstr.c \
+	ft_putnbr.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
