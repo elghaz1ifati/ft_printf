@@ -6,29 +6,33 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:26:40 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/24 02:51:00 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/24 04:08:35 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int ft_print_conversion(char specifier, va_list arguments)
+static int	ft_print_conversion(char specifier, va_list arguments)
 {
 	if (specifier == 'c')
 		return (ft_putchar(va_arg(arguments, int)));
 	if (specifier == 's')
 		return (ft_putstr(va_arg(arguments, char *)));
+	if (specifier == 'd' || specifier == 'i')
+		return (ft_putnbr(va_arg (arguments, int)));
+	if (specifier == 'u')
+		return (ft_putunbr(va_arg(arguments, unsigned int)));
 	if (specifier == '%')
 		return (ft_putchar('%'));
 	return (-1);
 }
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
-	va_list arguments;
-	int f;
-	int count;
-	int value;
+	va_list	arguments;
+	int		f;
+	int		count;
+	int		value;
 
 	va_start(arguments, format);
 	f = 0;
@@ -36,10 +40,7 @@ int ft_printf(const char *format, ...)
 	while (format[f])
 	{
 		if (format[f] == '%' && format[f + 1])
-		{
-			f++;
-			value = ft_print_conversion(format[f], arguments);
-		}
+			value = ft_print_conversion(format[++f], arguments);
 		else
 			value = ft_putchar(format[f]);
 		if (value == -1)
