@@ -6,7 +6,7 @@
 #    By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/21 15:00:16 by fatel-gh          #+#    #+#              #
-#    Updated: 2026/11/24 04:05:14 by fatel-gh         ###   ########.fr        #
+#    Updated: 2026/11/25 10:44:35 by fatel-gh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ REMOVE = rm -f
 ARCHIVE = ar 
 ARFLAGS = rcs
 SOURCES = ft_printf.c ft_putchar.c ft_putstr.c \
-	ft_putnbr.c
+	ft_putnbr.c ft_puthex.c ft_putptr.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
