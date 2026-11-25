@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: fatel-gh <fatel-gh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 04:21:58 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/24 04:31:20 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/24 18:55:35 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(unsigned int n, const char *base)
+int	ft_puthex(unsigned long n, const char *base)
 {
-	unsigned int	div;
-	unsigned int	len;
+	unsigned long	div;
+	unsigned long	len;
 	int				count;
 	int				value;
 
@@ -26,7 +26,7 @@ int	ft_puthex(unsigned int n, const char *base)
 	while (n / div >= len)
 		div = div * len;
 	count = 0;
-	while (div < 0)
+	while (div > 0)
 	{
 		value = ft_putchar(base[n / div]);
 		if (value == -1)
