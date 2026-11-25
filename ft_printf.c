@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:26:40 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/25 10:50:02 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/25 10:50:18 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static int	ft_print_conversion(char specifier, va_list arguments)
 	if (specifier == 'u')
 		return (ft_putunbr(va_arg(arguments, unsigned int)));
 	if (specifier == 'x')
-		return (ft_puthex(va_arg(arguments, unsigned int), "0123456789abcdef"));
 		return (ft_puthex(va_arg(arguments, unsigned int), "0123456789abcdef"));
 	if (specifier == 'X')
 		return (ft_puthex(va_arg(arguments, unsigned int), "0123456789ABCDEF"));
