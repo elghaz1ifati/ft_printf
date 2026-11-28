@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fatel-gh <fatel-gh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/20 14:26:40 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/25 14:28:55 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/28 19:42:57 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_print_conversion(char specifier, va_list arguments)
 	if (specifier == 's')
 		return (ft_putstr(va_arg(arguments, char *)));
 	if (specifier == 'd' || specifier == 'i')
-		return (ft_putnbr(va_arg (arguments, int)));
+		return (ft_putnbr(va_arg(arguments, int)));
 	if (specifier == 'u')
 		return (ft_putunbr(va_arg(arguments, unsigned int)));
 	if (specifier == 'x')
