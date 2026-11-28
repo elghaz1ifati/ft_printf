@@ -6,7 +6,7 @@
 /*   By: fatel-gh <fatel-gh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/25 10:12:18 by fatel-gh          #+#    #+#             */
-/*   Updated: 2026/11/28 19:40:36 by fatel-gh         ###   ########.fr       */
+/*   Updated: 2026/11/28 19:53:35 by fatel-gh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int	ft_putptr(void *ptr)
 	value = ft_puthex((uintptr_t)ptr, "0123456789abcdef");
 	if (value == -1)
 		return (-1);
-	retur(value + 2);
+	return(value + 2);
 }
